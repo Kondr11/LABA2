@@ -31,7 +31,7 @@ add_library(header STATIC
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
 )
 
-add_executable(source
+add_library(source STATIC
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
 )
 add_executable(main
