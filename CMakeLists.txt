@@ -11,7 +11,7 @@ set(
   CACHE STRING "Default cache server"
 )
 
-include("tools/gate/cmake/HunterGate.cmake")
+include("tools/gate/HunterGate.cmake")
 
 HunterGate(
   URL "https://github.com/cpp-pm/hunter/archive/v0.23.218.tar.gz"
@@ -31,6 +31,9 @@ add_library(header STATIC
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
 )
 
+add_library(source STATIC
+  ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
+)
 add_executable(main
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/main.cpp
 )
