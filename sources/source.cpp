@@ -1,4 +1,4 @@
-// Copyright 2019 Kondr11
+// Copyright 2019 <Kondr11>
 
 #include <header.hpp>
 
@@ -7,13 +7,13 @@ void Experiment::constructor(vector <unsigned int> &a, unsigned int size) {
 }
 
 void Experiment::init(vector <unsigned int> &a) {
-    for(unsigned int i = 0; i < a.size(); i++) {
-        a[i] = rand() % 1000;
+    for (unsigned int i = 0; i < a.size(); i++) {
+        a[i] = rand_f() % 1000;
     }
 }
 
 void Experiment::heating_cache(vector <unsigned int> &a ) {
-    for(unsigned int i = 0; i < a.size(); i++) {
+    for (unsigned int i = 0; i < a.size(); i++) {
         a[i]--;
     }
 }
@@ -21,7 +21,7 @@ void Experiment::heating_cache(vector <unsigned int> &a ) {
 time_t Experiment::investigate(vector <unsigned int> &a) {
     auto start = chrono::system_clock::now();
 
-    for(unsigned int j = 0; j < 1000; j++) {
+    for (unsigned int j = 0; j < 1000; j++) {
         for (unsigned int i = 0; i < a.size(); i++) {
             a[i]++;
         }
@@ -34,7 +34,6 @@ time_t Experiment::investigate(vector <unsigned int> &a) {
 }
 
 void Experiment::experiment(vector <unsigned int> &cache_size) {
-
     for (unsigned int i = 0; i < 5; i++) {
         vector<unsigned int> vec;
 
@@ -57,7 +56,7 @@ void Experiment::cache_levels_init(vector<unsigned int> &cache_size) {
     cin >> cnt;
 
     cache_size.resize(cnt);
-    for(auto& e: cache_size) {
+    for (auto& e : cache_size) {
         cout << "№" << i + 1 << " Level's size = ";
         cin >> e;
         i++;

@@ -11,7 +11,6 @@
 
 using std::cout;
 using std::cin;
-using std::string;
 using std::vector;
 using std::endl;
 using std::chrono;
@@ -26,7 +25,7 @@ public:
 
     static void init(vector <unsigned int> &a);
 
-    static void heating_cache(vector <unsigned int> &a );
+    static void heating_cache(vector <unsigned int> &a);
 
     static time_t investigate(vector <unsigned int> &a);
 
