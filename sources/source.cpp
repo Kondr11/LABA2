@@ -8,7 +8,7 @@ void Experiment::constructor(vector <unsigned int> &a, unsigned int size) {
 
 void Experiment::init(vector <unsigned int> &a) {
     for (unsigned int i = 0; i < a.size(); i++) {
-        a[i] = rand_f() % 1000;
+        a[i] = rand() % 1000;
     }
 }
 
@@ -19,7 +19,7 @@ void Experiment::heating_cache(vector <unsigned int> &a ) {
 }
 
 time_t Experiment::investigate(vector <unsigned int> &a) {
-    auto start = chrono::system_clock::now();
+    auto start = std::chrono::system_clock::now();
 
     for (unsigned int j = 0; j < 1000; j++) {
         for (unsigned int i = 0; i < a.size(); i++) {
@@ -27,9 +27,9 @@ time_t Experiment::investigate(vector <unsigned int> &a) {
         }
     }
 
-    auto end = chrono::system_clock::now();
-    time_t start_time = chrono::system_clock::to_time_t(start);
-    time_t end_time = chrono::system_clock::to_time_t(end);
+    auto end = std::chrono::system_clock::now();
+    time_t start_time = std::chrono::system_clock::to_time_t(start);
+    time_t end_time = std::chrono::system_clock::to_time_t(end);
     return end_time - start_time;
 }
 

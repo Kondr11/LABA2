@@ -13,9 +13,8 @@ using std::cout;
 using std::cin;
 using std::vector;
 using std::endl;
-using std::chrono;
 using std::system;
-using std::system_clock;
+using std::chrono::system_clock;
 
 class Experiment {
 public:
