@@ -40,16 +40,16 @@ add_executable(tests
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
 )
 
-target_include_directories(source 
+target_include_directories(header
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 target_include_directories(tests 
   PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_link_libraries(tests source GTest::main)
-target_link_libraries(source source)
-target_link_libraries(main source)
+target_link_libraries(tests header GTest::main)
+target_link_libraries(source header)
+target_link_libraries(main header)
 
 enable_testing()
 add_test(NAME unit_tests COMMAND tests) 
