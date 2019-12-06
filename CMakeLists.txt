@@ -27,7 +27,7 @@ hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
 
 
-add_library(source STATIC
+add_library(header STATIC
   ${CMAKE_CURRENT_SOURCE_DIR}/sources/source.cpp
 )
 
