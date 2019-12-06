@@ -48,7 +48,6 @@ target_include_directories(tests
 )
 
 target_link_libraries(tests header GTest::main)
-target_link_libraries(source header)
 target_link_libraries(main header)
 
 enable_testing()
